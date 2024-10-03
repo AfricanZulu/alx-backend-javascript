@@ -1,7 +1,9 @@
-export default function createIteratorObject(report) {
+/* eslint-disable guard-for-in */
+/* eslint-disable no-param-reassign */
+export default function appendToEachArrayValue(array, appendString) {
   const myarray = [];
-  for (const item of Object.values(report.allEmployees)) {
-    myarray.push(...item);
+  for (const item of array) {
+    myarray.push(appendString + item);
   }
 
   return myarray;
